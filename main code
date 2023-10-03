@@ -1,0 +1,246 @@
+#include<iostream>
+#include<conio.h>
+#include<iomanip>
+using namespace std;
+int main ()
+{
+ void line();
+ long int bill=0;
+ int static ch,dis;
+ int ord,cho,opt;
+ //clrscr();
+ line();
+ cout<<setw(55)<<"RP CAR WASHING CENTRE SANGLI"<<endl;
+ line();
+ cout<<setw(45)<<"PRICE LIST"<<endl;
+ line();
+ cout<<setw(53)<<"R.P Services offer list "<<endl;
+ line();
+ cout<<"Your bill is above 5000 disscount is 10 percentage";
+ cout<<endl<<"Unified Payments Interface(UPI) is 10 percentage";
+ cout<<endl<<"Membership disscount is 30 percentage"<<endl;
+ line();
+ cout<<endl<<"RP Membership rules";
+ cout<<endl<<"1.Services once a month";
+ cout<<endl<<"2.Atleast 9 services in a year"<<endl;
+ line();
+do
+{
+ cout<<endl<<setw(50)<<"Prices at R.P services"<<endl;
+ cout<<endl<<setw(55)<<"Vehicle type   Foam Wash   Polish   ";
+ cout<<endl<<"                      1.Bike       Rs.50       Rs.75";
+ cout<<endl<<"                      2.Car        Rs.300      Rs.150";
+ cout<<endl<<"                      3.Tractor    Rs.500      Rs.300";
+ cout<<endl<<"                      4.Truck      Rs.800      Rs.500";
+ cout<<endl<<"                      5.Bus        Rs.800      Rs.1200"<<endl;
+ line();
+ cout<<setw(50)<<"Enter your choice ordered please ";
+ cin>>ch;
+ if(ch==1)
+ {
+  cout<<setw(50)<<"\nBike services"<<endl;
+  cout<<setw(50)<<"\n1.Foam Washing Rs.50"<<endl;
+  cout<<setw(50)<<"\n2.Bick Polishing Rs.75"<<endl;
+  cout<<setw(50)<<"\n3.F.W+B.P Rs.100"<<endl;
+  cout<<setw(50)<<"\n4.No bick services"<<endl;
+  line();
+  cout<<endl<<setw(45)<<"Enter your choice ";
+  cin>>ord;
+  if(ord==4)
+  {
+   cout<<endl<<"Invalid choice\n";
+  }
+   if(ord==1||ord==2)
+   {
+    bill=bill+50;
+   }
+    else
+    {
+     if(ord==3)
+     bill=bill+100;
+    }
+  }
+ if(ch==2)
+ {
+   cout<<setw(50)<<"\nCar services"<<endl;
+   cout<<setw(50)<<"\n1.Foam wash Rs.300"<<endl;
+   cout<<setw(50)<<"\n2.Car Polishing Rs.150"<<endl;
+   cout<<setw(50)<<"\n3.F.W+B.P Rs.450"<<endl;
+   cout<<setw(50)<<"\n4.Wash(Out and In)F.W+B.P Rs.1000"<<endl;
+   cout<<setw(50)<<"\n5.No car services"<<endl;
+   line();
+   cout<<endl<<setw(45)<<"Enter your choice ";
+   cin>>ord;
+   if(ord==5)
+   {
+   cout<<"Invalid choice";
+   }
+   if(ord==2)
+   {
+   bill=bill+150;
+   }
+   if(ord==3)
+   {
+    bill=bill+450;
+   }
+   if(ord==4)
+   {
+    bill=bill+1000;
+   }
+  if(ord==1)
+  {
+    bill=bill+300;
+  }
+ }
+ line();
+ if(ch==3)
+ {
+  cout<<setw(50)<<"\nTractor Services"<<endl;
+   cout<<setw(50)<<"\n1.Foam wash Rs.500"<<endl;
+   cout<<setw(50)<<"\n2.Car Polishing Rs.300"<<endl;
+   cout<<setw(50)<<"\n3.F.W+B.P Rs.800"<<endl;
+   cout<<setw(50)<<"\n4.Wash(Out and In)F.W+B.P Rs.2000"<<endl;
+   cout<<"\n5.No Tractor services"<<endl;
+
+   line();
+    cout<<"Enter your order"<<endl;
+ cin>>ord;
+ if(ord==5)
+ {
+   cout<<"Invalid choice";
+ }
+ if(ord==2)
+ {
+   bill=bill+300;
+ }
+ if(ord==3)
+ {
+  bill=bill+800;
+ }
+ if(ord==4)
+ {
+  bill=bill+2000;
+ }
+  else if(ord==1)
+  {
+    bill=bill+500;
+  }
+ }
+  if(ch==4)
+ {
+  cout<<setw(50)<<"\nTruck Services"<<endl;
+   cout<<setw(50)<<"\n1.Foam wash Rs.800"<<endl;
+   cout<<setw(50)<<"\n2.Car Polishing Rs.500"<<endl;
+   cout<<setw(50)<<"\n3.F.W+B.P Rs.1300"<<endl;
+   cout<<setw(50)<<"\n4.Wash(Out and In)F.W+B.P Rs.3000"<<endl;
+   cout<<"\n5.No Truck services"<<endl;
+
+    line();
+    cout<<"Enter your order"<<endl;
+ cin>>ord;
+ if(ord==5)
+ {
+   cout<<"Invalid choice";
+ }
+ if(ord==2)
+ {
+   bill=bill+500;
+ }
+ if(ord==3)
+ {
+  bill=bill+1300;
+ }
+ if(ord==4)
+ {
+  bill=bill+3000;
+ }
+  else if(ord==1)
+  {
+    bill=bill+800;
+  }
+ }
+ if(ch==5)
+ {
+  cout<<setw(50)<<"\nBus Services"<<endl;
+   cout<<setw(50)<<"\n1.Foam wash Rs.1200"<<endl;
+   cout<<setw(50)<<"\n2.Car Polishing Rs.800"<<endl;
+   cout<<setw(50)<<"\n3.F.W+B.P Rs.2000"<<endl;
+   cout<<setw(50)<<"\n4.Wash(Out and In)F.W+B.P Rs.3500"<<endl;
+   cout<<"\n5.No Bus services"<<endl;
+
+    line();
+     cout<<"Enter your order"<<endl;
+ cin>>ord;
+ if(ord==5)
+ {
+   cout<<"Invalid choice";
+ }
+ if(ord==2)
+ {
+   bill=bill+800;
+ }
+ if(ord==3)
+ {
+  bill=bill+2000;
+ }
+ if(ord==4)
+ {
+  bill=bill+3500;
+ }
+  else if(ord==1)
+  {
+    bill=bill+1200;
+  }
+ }
+ line();
+ cout<<endl<<"Options";
+ cout<<endl<<"1.Bill Karo "<<endl;
+ cout<<"2.Or vehicles hai"<<endl;
+ cout<<"Enter the option "<<endl;
+ cin>>cho;
+}while(cho!=1);
+ if(cho==1)
+ {
+  cout<<"Your Bill is "<<bill<<endl;
+ }
+ line();
+ cout<<setw(45)<<"Total bill is "<<bill<<endl;
+ line();
+ cout<<"You can join to RP Service centre for discounts"<<endl;
+ cout<<"If you want to join GOLD membership then press 999 "<<endl;
+ cout<<"For SILVER membership press 111 and for no disscount press 888"<<endl;
+ cin>>opt;
+ if(opt==999)
+ {
+ cout<<"Disscount is 30 per"<<endl;
+ dis=bill*0.3;
+ cout<<"Disscount is "<<dis<<" Rupees"<<endl;
+ line();
+ cout<<"Total bill with disscount is "<<bill-dis;
+ }
+ if(opt==111)
+ {
+  cout<<"Disscount is 10 per"<<endl;
+  dis=bill*0.1;
+  cout<<"Disscount is "<<dis<<" Rupees"<<endl;
+  line();
+  cout<<"Total bill with disscount is "<<bill-dis<<" Rupees";
+ }
+   cout<<endl<<"For online payment transfer to RPService.UPI"<<endl;
+   line();
+   cout<<"Payment is processing............."<<endl;
+   line();
+   cout<<"Payment Done"<<endl;
+   line();
+   cout<<setw(50)<<"Thank You For Visiting";
+
+ return(0);
+}
+void line()
+{
+ int i;
+ for(i=0;i<80;i++)
+ {
+  cout<<"_";
+ }
+}
